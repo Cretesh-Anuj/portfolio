@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible", content="IE=Edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuj Portfolio</title>
+     <link rel="stylesheet" href="style.css">
+     <script src="https://kit.fontawesome.com/ba91638dcf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- ----------------Header Section----------------- -->
+   <div id="header">
+       <div class="container">
+        <nav>
+            <img src="images/logo.png" alt="logo" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Sevices</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Full Stack Developer</p>
+             <h1>Hi, I am <span>Anuj</span><br/> Sharma From Nepal</h1>
+           </div>
+       </div>
+   </div>
+   <!-- -----------------About Section ----------------- -->
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+              <img src="images/anuj.png" alt="userimage">
+            </div>
+            <div class="about-col-2">
+                  <h1 class="sub-title">About Me</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi quae repellendus commodi, ratione ipsa quos optio! Corrupti asperiores labore quos ut obcaecati itaque odit, qui sint! Mollitia dicta molestiae voluptas.
+                  Praesentium nulla voluptas quaerat nihil a quibusdam odit excepturi dolor veniam. Possimus fugit placeat, sequi, totam nisi laborum magni facilis facere quis quam itaque natus, provident perspiciatis alias maiores ut.
+                  Fuga molestiae dolorum aspernatur velit blanditiis magni saepe culpa vitae minus. Facilis porro optio esse inventore nobis tenetur quia nihil, amet voluptatem harum consequatur, recusandae vero nam at nesciunt quaerat?
+                  Illo modi maxime veniam dolor perferendis! Beatae quas sint voluptatibus eum officiis sed aliquam voluptatem nihil unde quo perferendis repellat iure sequi molestiae corporis, possimus, illo explicabo commodi exercitationem numquam.</p>
+                  <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                  </div>
+                  <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br> Building Web Application</li>
+                        <li><span>App Development</span><br> Building Mobile Application</li>
+                        <li><span>Basic System Architecture</span><br>Knowldge of Design patterns and System Architecture</li>
+                    </ul>
+                  </div>
+                  <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2024-Current</span><br>Software Engineer at Infinite Software Services</li>
+                        <li><span>2022-2024</span><br> Software Engineer at Cotiviti Nepal</li>
+                        <li><span>2021 - 2022</span><br>Junior Dotnet Developer at Silicon Soft Nepal</li>
+                        <li><span>2021 - 2021</span><br> Dotnet Intern at Silicon Soft Nepal</li>
+                    </ul>
+                  </div>
+                  <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022</span><br>BSC. IT at ISMT affialted with University of Sunderland</li>
+                        <li><span>2018</span><br>+2 Science at Grammar College</li>
+                        <li><span>2016</span><br>SLC at Shree Janajyoti H.S School</li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+
+    </div>
+   </div>
+   <!-- --------------------------Services Section----------------- -->
+   <div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Development</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore adipisci, 
+                    nihil ratione quae itaque, architecto, veniam omnis mollitia quasi culpa animi 
+                    aliquid quo ducimus molestias odio repellendus aperiam cupiditate quia!</p>
+                    <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Development</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore adipisci, 
+                    nihil ratione quae itaque, architecto, veniam omnis mollitia quasi culpa animi 
+                    aliquid quo ducimus molestias odio repellendus aperiam cupiditate quia!</p>
+                    <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code-commit"></i>
+                <h2>API Development</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore adipisci, 
+                    nihil ratione quae itaque, architecto, veniam omnis mollitia quasi culpa animi 
+                    aliquid quo ducimus molestias odio repellendus aperiam cupiditate quia!</p>
+                    <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+   </div>
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName('tab-links')
+        var tabcontents = document.getElementsByClassName('tab-contents')
+        function opentab(tabname){
+             for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+             }
+             for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+             }
+             event.currentTarget.classList.add("active-link");
+             document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
